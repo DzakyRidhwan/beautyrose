@@ -361,4 +361,105 @@ h2 {
   text-align: center;
   margin-bottom: 20px;
 }
-            
+        
+/* Fade-in animation untuk overlay */
+@keyframes fadeInIntro {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.intro-overlay {
+  animation: fadeInIntro 1s ease-out;
+}
+
+/* Smooth button hover effects */
+#yesBtn:hover, #noBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+}
+
+/* Subtle glowing effect */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+}
+
+.intro-box {
+  animation: pulseGlow 3s infinite;
+}
+
+.container {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  pointer-events: none; /* supaya tidak interaktif saat tersembunyi */
+}
+
+@keyframes fadeOutIntro {
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+  }
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364); /* gradasi cantik */
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: 'Cinzel', serif;
+}
+
+.sticker {
+  position: absolute;
+  top: 100px; /* Sesuaikan dengan posisi di atas intro-box */
+  left: 50%;
+  transform: translateX(-50%);
+  animation: moveSticker 5s ease-in-out infinite;
+  z-index: 10000; /* Pastikan stiker berada di atas semua elemen lain */
+  opacity: 0.85; /* Agak transparan agar menyatu dengan background */
+  background: rgba(8, 15, 26, 0.8); /* Agar latar belakang stiker sesuai dengan background */
+  border-radius: 10px; /* Membulatkan sudut jika diinginkan */
+}
+
+.sticker img {
+  width: 200px; /* Sesuaikan ukuran stiker */
+  height: auto;
+  z-index: 10001; /* Pastikan gambar stiker berada di atas background */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Efek bayangan halus */
+  border-radius: 10px; /* Sudut membulat jika diinginkan */
+}
+
+@keyframes moveSticker {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  25% {
+    transform: translateX(-50%) translateY(-20px);
+  }
+  50% {
+    transform: translateX(-50%) translateY(0);
+  }
+  75% {
+    transform: translateX(-50%) translateY(20px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
