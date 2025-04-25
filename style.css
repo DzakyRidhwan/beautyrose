@@ -426,7 +426,7 @@ body {
 
 .sticker {
   position: absolute;
-  top: -40px; 
+  top: 100px; 
   left: 50%;
   transform: translateX(-50%);
   animation: moveSticker 5s ease-in-out infinite;
