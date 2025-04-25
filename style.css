@@ -353,4 +353,12 @@ body {
   color: white;
   position: relative;
 }
+
+h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 24px;
+  color: #f9f5e9;
+  text-align: center;
+  margin-bottom: 20px;
+}
             
