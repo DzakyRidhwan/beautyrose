@@ -51,6 +51,11 @@
   </div>
 </div>
 
+<div class="sticker">
+  <img src="harry.gif" alt="Sticker" />
+</div>
+
+
 <script>
   const intro = document.getElementById('intro');
   const yesBtn = document.getElementById('yesBtn');
@@ -58,7 +63,11 @@
 
   yesBtn.addEventListener('click', () => {
     intro.style.display = 'none';
+
+    
   });
+
+  
 
   noBtn.addEventListener('mouseover', () => {
     const maxX = window.innerWidth - noBtn.offsetWidth;
@@ -71,6 +80,20 @@
     noBtn.style.left = `${randomX}px`;
     noBtn.style.top = `${randomY}px`;
   });
+  
+  const flower = document.querySelector('.container');
+
+yesBtn.addEventListener('click', () => {
+  document.querySelector('.sticker').style.display = 'none';
+  intro.style.animation = 'fadeOutIntro 0.5s ease forwards';
+  setTimeout(() => {
+    intro.style.display = 'none';
+    flower.style.opacity = '1';
+    flower.style.pointerEvents = 'auto';
+    
+  }, 500);
+});
+
 </script>
   
 </body>
