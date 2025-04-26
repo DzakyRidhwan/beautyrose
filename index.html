@@ -41,6 +41,8 @@
   </div>
 </div>
 
+<div class="rain"></div>
+	
 <div class="intro-overlay" id="intro">
   <div class="intro-box">
     <h2>Magic awaits... Will you proceed?</h2>
@@ -55,7 +57,6 @@
   <img src="harry.gif" alt="Sticker" />
 </div>
 
-
 <script>
   const intro = document.getElementById('intro');
   const yesBtn = document.getElementById('yesBtn');
@@ -64,10 +65,7 @@
   yesBtn.addEventListener('click', () => {
     intro.style.display = 'none';
 
-    
   });
-
-  
 
   noBtn.addEventListener('mouseover', () => {
     const maxX = window.innerWidth - noBtn.offsetWidth;
@@ -96,7 +94,7 @@ yesBtn.addEventListener('click', () => {
 
 const rain = document.querySelector('.rain');
 
-  for (let i = 0; i < 120; i++) { // bisa sesuaikan jumlahnya
+  for (let i = 0; i < 120; i++) { 
     const sparkle = document.createElement('div');
     sparkle.classList.add('sparkle');
     sparkle.style.left = Math.random() * window.innerWidth + 'px';
